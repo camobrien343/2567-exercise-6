@@ -340,6 +340,7 @@ figure {
 
 .col-9-12 {
 	width: 91.67%;
+	
 }
 /*--------------------------------------------------------------
 3.3 - SECTIONS
@@ -426,6 +427,16 @@ figure {
 	float: right !important;
 }
 
+/*--------------------------------------------------------------
+5.6 Flex
+-------------------------------------------------------------- */
+
+
+
+.col-9-12 p:last-child {
+	width: 60%;
+	margin: 0 auto;
+}
 
 
 
@@ -433,5 +444,80 @@ figure {
 
 @media screen and (max-width: 768px) {
 	
+
+header .col-1-2 {
+	width: 70%;
+}
+
+.col-1-4 {
+	width: 50%;
+	padding: 20px 5px;
+}
+
+h1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    padding: 20px;
+}
+
+h3 {
+	font-weight: 300;
+	font-size: 1.65rem;
+}
+
+
+.col-3-5 {
+	width: 80%;
+}
+
+figure {
+	margin-right: 0;
+}
+
+nav li  {
+	display:inline-block;
+	list-style: none;
+	
+    font-weight: 700;
+	font-size: .9rem;
+	padding-left: 0;
+	padding-right: 5px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	padding:10px 0;
+}
+
+footer .col-1-2 {
+	width: 100%;
+}
+
+footer .col-1-2:nth-child {
+	width: 70%;
+}
+
+footer .col-1-2 {
+	text-align: center;
+	padding-right: 0;
+}
+
+.col-9-12 p:last-child {
+	width: 80%;
+}
+
+#map {
+	height: 200px;
+	width: 75%;
+	margin-top: 50px;
+}
+
+/*--------------------------------------------------------------
+5.6 - Flex
+-------------------------------------------------------------- */
+
+
 	
 }
