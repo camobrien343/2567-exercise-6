@@ -37,6 +37,7 @@ html {
 body {
 	font-family: 'Open Sans', sans-serif;
 	color: white;
+	font-size: 1.2rem;
 }
 /*--------------------------------------------------------------
 1.1 - BODY
@@ -342,6 +343,12 @@ figure {
 	width: 91.67%;
 	
 }
+
+.col-9-12 p:last-child {
+	width: 60%;
+	margin: 0 auto;
+}
+
 /*--------------------------------------------------------------
 3.3 - SECTIONS
 -------------------------------------------------------------- */
@@ -427,16 +434,7 @@ figure {
 	float: right !important;
 }
 
-/*--------------------------------------------------------------
-5.6 Flex
--------------------------------------------------------------- */
 
-
-
-.col-9-12 p:last-child {
-	width: 60%;
-	margin: 0 auto;
-}
 
 
 
@@ -444,51 +442,121 @@ figure {
 
 @media screen and (max-width: 768px) {
 	
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Typography
+	1.1 - Headings
+	1.2 - Body Copy
+	1.3 - Buttons
+	1.4 - Forms
+	1.5 - Lists
+	1.6 - Tables
+2.0 - Navigation Menus
+	3.1 - Main Menu
+	3.2 - Sub Menu
+	3.3 - Footer Menu
+3.0 - Content
+	3.1 - Site Structure
+	3.2 - Section Name
+	3.3 - Section Name
+4.0 - Media
+5.0 - Utility
+	5.1 - Background Colors
+	5.2 - Text Colors
+	5.3 - Text Sizes
+	5.4 - Alignments
+--------------------------------------------------------------*/
 
-header .col-1-2 {
-	width: 70%;
-}
+/*--------------------------------------------------------------
+1.0 - TYPOGRAPHY
+-------------------------------------------------------------- */
 
-.col-1-4 {
-	width: 50%;
-	padding: 20px 5px;
+body {
+	font-size: 1rem;
 }
+/*--------------------------------------------------------------
+1.2 - HEADINGS
+-------------------------------------------------------------- */
 
 h1 {
     font-size: 4.5rem;
     line-height: 4.5rem;
+	padding: 20px;
     text-align: center;
-    padding: 20px;
 }
 
 h3 {
 	font-weight: 300;
 	font-size: 1.65rem;
 }
+/*--------------------------------------------------------------
+1.4 - FORMS
+-------------------------------------------------------------- */
 
+form {
+	padding-left: 0;
+}
 
-.col-3-5 {
-	width: 80%;
+form .col-1 {
+	padding-right: 0!important;
+	width: 100%;
+}
+/*--------------------------------------------------------------
+1.5 - LISTS
+-------------------------------------------------------------- */
+
+dl {
+	text-align: left;
+}
+
+dd {
+	padding-left: 20px;
+}
+
+/*--------------------------------------------------------------
+2.0 - MAIN MENU
+-------------------------------------------------------------- */
+
+nav li  {
+	display:inline-block;
+    font-weight: 700;
+	font-size: .9rem;
+	list-style: none;
+	padding: 0 5px 0 0;
+}
+
+nav a {
+	color: white;
+	padding: 10px 0;
+	text-decoration: none;
+}
+
+nav {
+	margin-left: -10px;
+}
+/*--------------------------------------------------------------
+3.0 - SITE STRUCTURE
+-------------------------------------------------------------- */
+
+.wrapper {
+	width: 95%;
+}
+
+* {
+	margin: 0;
 }
 
 figure {
 	margin-right: 0;
 }
 
-nav li  {
-	display:inline-block;
-	list-style: none;
-	
-    font-weight: 700;
-	font-size: .9rem;
-	padding-left: 0;
-	padding-right: 5px;
-}
+/*--------------------------------------------------------------
+3.1 - SINGLE COLUMNS
+-------------------------------------------------------------- */
 
-nav a {
-	color: white;
-	text-decoration: none;
-	padding:10px 0;
+header .col-1-2 {
+	width: 70%;
 }
 
 footer .col-1-2 {
@@ -500,24 +568,59 @@ footer .col-1-2:nth-child {
 }
 
 footer .col-1-2 {
-	text-align: center;
 	padding-right: 0;
+	text-align: center;
+}
+
+footer .col-1-2:first-child {
+	width: 100%;
+}
+
+.col-1-2#address {
+	width: 50%;
+}
+
+.col-1-4 {
+	padding: 20px 5px;
+	width: 50%;
+}
+/*--------------------------------------------------------------
+3.2 - PARTIAL COLUMNS
+-------------------------------------------------------------- */
+
+.col-3-5 {
+	width: 80%;
 }
 
 .col-9-12 p:last-child {
 	width: 80%;
 }
-
-#map {
-	height: 200px;
-	width: 75%;
-	margin-top: 50px;
-}
-
 /*--------------------------------------------------------------
-5.6 - Flex
+3.3 - SECTIONS
 -------------------------------------------------------------- */
 
+#map, #address {
+	width: 50%;
+}
+
+#address {
+	text-align: left;
+}
+/*--------------------------------------------------------------
+5.4 - ALIGNMENTS
+-------------------------------------------------------------- */
+
+#address {
+	float: left;
+}
+/*--------------------------------------------------------------
+4.0 - MEDIA
+-------------------------------------------------------------- */
+
+#map {
+	float: right;
+	margin-top: 0;
+}
 
 	
 }
