@@ -27,41 +27,21 @@
 	5.4 - Alignments
 --------------------------------------------------------------*/
 
-
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
 html {
 	font-size: 14px;
 }
-body {
-	font-family: 'Open Sans', sans-serif;
-	color: white;
-	font-size: 1.2rem;
-}
-/*--------------------------------------------------------------
-1.1 - BODY
--------------------------------------------------------------- */
-.lead {
-	font-weight: 500;
-	font-size: 1.2rem;
-}
 
-.lead span {
-	color:#77cae6;
-	font-weight: 800;
+body {
+	font: 1.2rem 'Open Sans', sans-serif;
+	color: white;
 }
 
 /*--------------------------------------------------------------
 1.2 - HEADINGS
 -------------------------------------------------------------- */
-h1 {
-    font-size: 5.5rem;
-    background-color: rgba(255,255,255,.5);
-    line-height: 5rem;
-    text-align: center;
-    padding: 20px;
-}
 
 h2 {
 	font-size: 3rem;
@@ -74,6 +54,40 @@ h3 {
 }
 h4 {
 	margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+1.3 - BODY COPY
+-------------------------------------------------------------- */
+#lead {
+	font-weight: 500;
+	font-size: 1.2rem;
+}
+
+#lead span {
+	color:#77cae6;
+	font-weight: 800;
+}
+
+#hero p {
+    font-size: 5.5rem;
+	font-weight: 700;
+    background-color: rgba(255,255,255,.5);
+    line-height: 5rem;
+    padding: 20px;
+}
+
+address {
+	font-style: normal;
+}
+
+/*--------------------------------------------------------------
+1.3 - Buttons
+-------------------------------------------------------------- */
+
+a {
+	text-decoration: none;
+	color: #FFF;
 }
 
 /*--------------------------------------------------------------
@@ -101,6 +115,7 @@ input:focus, textarea:focus {
 	outline:none;
 	border:1px solid #115e4b;
 }
+
 ::-webkit-input-placeholder {
    color: white;
 }
@@ -132,19 +147,7 @@ form a:hover {
 	background-color: white;
 	
 }
-/*--------------------------------------------------------------
-1.5 - LISTS
--------------------------------------------------------------- */
-dt, dd {
-	display: inline-block
-}
-dt {
-	font-weight:100;
-	width: 20px;
-}
-dd {
-	font-weight: 600;
-}
+
 /*--------------------------------------------------------------
 2.0 - MAIN MENU
 -------------------------------------------------------------- */
@@ -176,6 +179,8 @@ nav a:hover {
 3.0 - SITE STRUCTURE
 -------------------------------------------------------------- */
 *, *:after, *:before {
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border;
 	box-sizing: border-box;
@@ -232,7 +237,6 @@ figure {
 
 .col-1-4 {
 	width: 25%;
-	padding-bottom: 0;
 }
 
 .col-1-5 {
@@ -366,6 +370,7 @@ figure {
   background: url(../img/hero.jpeg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
+  -ms-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
@@ -400,9 +405,7 @@ figure {
 /*--------------------------------------------------------------
 5.3 - SPACING
 -------------------------------------------------------------- */
-.p-t-sm {
-	padding-top: 10px;
-}
+
 .p-t-md {
 	padding-top: 20px;
 }
@@ -434,39 +437,7 @@ figure {
 	float: right !important;
 }
 
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
-	
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-1.0 - Typography
-	1.1 - Headings
-	1.2 - Body Copy
-	1.3 - Buttons
-	1.4 - Forms
-	1.5 - Lists
-	1.6 - Tables
-2.0 - Navigation Menus
-	3.1 - Main Menu
-	3.2 - Sub Menu
-	3.3 - Footer Menu
-3.0 - Content
-	3.1 - Site Structure
-	3.2 - Section Name
-	3.3 - Section Name
-4.0 - Media
-5.0 - Utility
-	5.1 - Background Colors
-	5.2 - Text Colors
-	5.3 - Text Sizes
-	5.4 - Alignments
---------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
@@ -475,21 +446,27 @@ figure {
 body {
 	font-size: 1rem;
 }
+
 /*--------------------------------------------------------------
 1.2 - HEADINGS
 -------------------------------------------------------------- */
 
-h1 {
+h3 {
+	font-weight: 300;
+	font-size: 1.65rem;
+}
+
+/*--------------------------------------------------------------
+1.3 - BODY COPY
+-------------------------------------------------------------- */
+
+#hero p {
     font-size: 4.5rem;
     line-height: 4.5rem;
 	padding: 20px;
     text-align: center;
 }
 
-h3 {
-	font-weight: 300;
-	font-size: 1.65rem;
-}
 /*--------------------------------------------------------------
 1.4 - FORMS
 -------------------------------------------------------------- */
@@ -502,6 +479,7 @@ form .col-1 {
 	padding-right: 0!important;
 	width: 100%;
 }
+
 /*--------------------------------------------------------------
 1.5 - LISTS
 -------------------------------------------------------------- */
@@ -533,7 +511,7 @@ nav a {
 }
 
 nav {
-	margin-left: -10px;
+	margin: 20px 0 0 0;
 }
 /*--------------------------------------------------------------
 3.0 - SITE STRUCTURE
@@ -563,10 +541,6 @@ footer .col-1-2 {
 	width: 100%;
 }
 
-footer .col-1-2:nth-child {
-	width: 70%;
-}
-
 footer .col-1-2 {
 	padding-right: 0;
 	text-align: center;
@@ -584,12 +558,17 @@ footer .col-1-2:first-child {
 	padding: 20px 5px;
 	width: 50%;
 }
+
+.col-1-6 {
+	width: 30%;
+}
+
 /*--------------------------------------------------------------
 3.2 - PARTIAL COLUMNS
 -------------------------------------------------------------- */
 
 .col-3-5 {
-	width: 80%;
+	width: 70%;
 }
 
 .col-9-12 p:last-child {

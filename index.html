@@ -12,8 +12,9 @@
         var mapCanvas = document.getElementById('map');
         var mapOptions = {
           center: new google.maps.LatLng(44.5403, -78.5463),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+          zoom: 12,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+		  scrollwheel:  false
         }
         var map = new google.maps.Map(mapCanvas, mapOptions)
       }
@@ -29,9 +30,9 @@
 <header class="p-t-md" id="hero">
 	<div class="wrapper">
     	<div class="row">
-            <figure class="col-1-6">       
-                <img src="img/logo.png" alt="creativeworks logo">
-            </figure>
+            <h1 class="col-1-6">    
+            	<a href="#"><img src="img/logo.png" alt="Zendesk logo"></a>
+            </h1>
             <nav class="col-3-5 push-right txt-uppercase" id="smooth-scroll"> 
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -40,9 +41,9 @@
                 </ul>
             </nav>
         </div>
-        <div class="row p-t-lg p-b-lg">
+        <div class="p-t-lg p-b-lg">
         	<div class="col-1-2 center-block txt-uppercase txt-center">
-            	<h1>Good ideas come First!</h1>
+            	<p>Good ideas come First!</p>
             </div>
         </div>
     </div>
@@ -52,14 +53,12 @@
 
 <section class="p-t-lg p-b-xl" id="services">
 	<div class="wrapper">
-    <header>
-          <div class="row txt-center">
+    	<header class="txt-center">
               <div class="col-9-12 center-block">
-                  <h2 class=" txt-uppercase">Our Services</h2>
-                  <p class="lead txt-uppercase">Lorem ipsum dolor sit amet, usu <span>nemore oporteat</span> lobortis ad, eos soleat verear cotidieque id. </p>
-                  <p>Vis te veri tritani, at quodsi commune has, probo maiestatis ei has. Molestie suscipiantur concludaturque cu has, nam ne omnesque antiopam, & indoctum complectitur pro ad. Ea cum diam malorum vivendum, vel quod commodo repudiandae et. </p>
+                  <h2 class="txt-uppercase">Our Services</h2>
+                  <p class="txt-uppercase" id="lead">Lorem ipsum dolor sit amet, usu <span>nemore oporteat</span> lobortis ad, eos soleat verear cotidieque id. </p>
+                  <p>Vis te veri tritani, at quodsi commune has, probo maiestatis ei has. Molestie suscipiantur concludaturque cu has, nam ne omnesque antiopam, &amp; indoctum complectitur pro ad. Ea cum diam malorum vivendum, vel quod commodo repudiandae et. </p>
               </div>
-          </div>
           </header>
             <div class="row txt-center">
                 <section class="col-1-4">
@@ -88,7 +87,9 @@
                 </section>
                 <section class="col-1-4">
                     <div>
-                        <h3 class="txt-uppercase">Launch</h3>
+                    	<header>
+                        	<h3 class="txt-uppercase">Launch</h3>
+                        </header>
                         <p>Molestie suscipiantur concludaturque cu has, nam ne omnesque antiopam, indoctum complectitur pro ad. Ea cum diam malorum vivendum, vel quod commodo repudiandae et. Ea cum diam malorum vivendum.</p>
                     </div>
                 </section>
@@ -99,7 +100,7 @@
 
 <footer class="p-t-lg p-b-lg" id="contact">
 	<div class="wrapper">
-    	<div class="row txt-center">
+    	<div class="txt-center">
         	<div class="col-9-12 center-block">
             	<h2 class=" txt-uppercase">Contact Us</h2>
                 <p>Vis te veri tritani, at quodsi commune has, probo maiestatis ei has. Molestie suscipiantur concludaturque cu has, nam ne omnesque antiopam, indoctum complectitur pro ad. Ea cum diam malorum vivendum, vel quod commodo repudiandae et. </p>
@@ -111,39 +112,40 @@
                     <div class="col-1-2" id="address">
                     	<h3>Address</h3>
                         <h4>Zendesk</h4>
+                        <address>
                         <p class="m-t-0 m-b-lg">123 Fake Street<br/>
                         Fakersvill, FA 12345-1234</p>
-                        <dl>
-                        	<dt>Phone:</dt>
-                            <dd>123.123.1234<br/></dd>
-                            <dt>Fax:</dt>
-                            <dd>123.123.1234<br/></dd>
-                            <dt>Email:</dt>
-                            <dd>hello@zendesk.com<br/></dd>
-                            <dt>Skype:</dt>
-                            <dd>Zendesk</dd>
-                        </dl>
+                      	</address>
+                        	<p>Phone:
+                            <a href="tel:+1231231234">123.123.1234</a></p>
+                            <p>Fax:
+                            <a href="fax:1231231234">123.123.1234</a></p>
+                            <p>Email:
+                            <a href="hello@zendesk.com">hello@zendesk.com</a></p>
+                            <p>Skype:
+                            Zendesk</p>
+                        
                     </div>
                     <div class="col-1-2" id="map">
                     </div>
                 </div>
             </section>
             <div class="col-1-2 p-t-lg">
-                <form class="row">
+                <form>
                 	<div class="col-1-2">
-                    <label>First & Last Name:</label>
-                    <input  name="name" type="text" value="" placeholder="Name"/>
+                    <label for="name">First & Last Name:</label>
+                    <input id="name" name="name" type="text" value="" placeholder="Name"/>
                     </div>
                     <div class="col-1-2">
-                        <label>Your email:</label>
-                        <input name="email" type="text" placeholder="Email" />
+                        <label for="email">Your email:</label>
+                        <input id="email" name="email" type="email" placeholder="Email"/>
                     </div>
-                    <div class="col-1">
+                    <div>
                         <label for="message">Your message:</label>
                         <textarea id="message" name="message" rows="7" placeholder="Message"></textarea>
-                        <div class="txt-center">
+                        <p class="txt-center">
                             <a href="#">Submit</a>
-                        </div>
+                        </p>
                     </div>
                 </form>
             </div>
